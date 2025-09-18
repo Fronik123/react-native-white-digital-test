@@ -1,5 +1,5 @@
 import React from 'react'
-import { SafeAreaView } from 'react-native'
+import { SafeAreaView, View, Text } from 'react-native'
 import { useActivities } from '@hooks/useActivities'
 import Error from '@component/Error'
 
@@ -36,13 +36,19 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
 
   return (
     <SafeAreaView style={tw`flex-1 `}>
-      <Activities
-        data={data}
-        refetch={refetch}
-        handleActivitiesItem={handleActivitiesItem}
-        isRefetching={isRefetching}
-        navigation={navigation}
-      />
+      {data ? (
+        <Activities
+          data={data}
+          refetch={refetch}
+          handleActivitiesItem={handleActivitiesItem}
+          isRefetching={isRefetching}
+          navigation={navigation}
+        />
+      ) : (
+        <View style={tw`flex-1 justify-center items-center`}>
+          <Text style={tw`text-xl font-semibold`}>No found Activities</Text>
+        </View>
+      )}
     </SafeAreaView>
   )
 }
