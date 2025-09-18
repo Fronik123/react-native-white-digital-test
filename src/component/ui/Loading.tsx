@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text, ActivityIndicator } from 'react-native'
-import tw from '../../tw'
+import tw from '../../../tw'
 
 const Loading: React.FC = () => {
   return (
