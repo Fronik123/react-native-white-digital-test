@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from 'react-native'
 import tw from '../../../tw'
 
 import { FlatList, RefreshControl } from 'react-native-gesture-handler'
-import ActivitiesItem from '@component/ActivitiesItem'
+import ActivitiesItem from '@component/activities/ActivitiesItem'
 import { TActivities } from '../../data/types/activities'
 import { RootStackParamList } from '@screens/types/root'
 import { StackNavigationProp } from '@react-navigation/stack'

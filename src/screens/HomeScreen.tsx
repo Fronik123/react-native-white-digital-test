@@ -2,7 +2,6 @@ import React from 'react'
 import { SafeAreaView } from 'react-native'
 import { useActivities } from '@hooks/useActivities'
 import Error from '@component/Error'
-import Loading from '@component/Loading'
 
 import { TActivities } from '../data/types/activities'
 
@@ -11,6 +10,7 @@ import tw from '../../tw'
 import { RootStackParamList } from '../screens/types/root'
 import { StackNavigationProp } from '@react-navigation/stack'
 import Activities from '@component/activities/Activities'
+import Loading from '@component/ui/Loading'
 
 type Props = {
   navigation: StackNavigationProp<RootStackParamList>

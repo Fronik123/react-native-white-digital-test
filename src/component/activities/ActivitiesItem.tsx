@@ -1,11 +1,12 @@
 import React from 'react'
-import { View, Text, Image } from 'react-native'
-import tw from '../../tw'
+import { View, Text } from 'react-native'
+import tw from '../../../tw'
 
 import StartIcon from '@assets/icons/activities/star.svg'
 import MapPoint from '@assets/icons/activities/map-point.svg'
 
-import { TActivities } from '../data/types/activities'
+import { TActivities } from '../../data/types/activities'
+import MyImage from '../ui/MyImage'
 
 type Props = {
   activitiesData: TActivities
@@ -16,10 +17,9 @@ const ActivitiesItem: React.FC<Props> = data => {
 
   return (
     <View style={tw`mr-5 ml-5 mb-2.5`}>
-      <Image
-        source={{ uri: activities.photoUrl }}
-        style={tw`w-full h-[139px] border-0 rounded-[20px]`}
-      />
+      <View>
+        <MyImage uri={activities.photoUrl} />
+      </View>
 
       <View style={tw`border-0 rounded-[20px] p-5 bg-bgGray`}>
         <View style={tw`flex-row justify-between items-center`}>

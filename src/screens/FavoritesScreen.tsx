@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import {
   View,
   Text,
-  Image,
   StatusBar,
   TouchableOpacity,
   Alert,
@@ -17,7 +16,8 @@ import tw from '../../tw'
 import BackIcon from '@assets/icons/favorites/back.svg'
 
 import { useAddFavorite } from '@hooks/useAddFavorite'
-import Loading from '@component/Loading'
+import Loading from '@component/ui/Loading'
+import MyImage from '@component/ui/MyImage'
 
 type Props = {
   route: RouteProp<RootStackParamList, 'Favorites'>
@@ -51,10 +51,9 @@ const FavoritesScreen: React.FC<Props> = ({ navigation, route }) => {
 
       {isPending && <Loading />}
 
-      <Image
-        source={{ uri: dataActivities.photoUrl }}
-        style={tw`w-full h-[450px] border-0 rounded-bl-[20px] rounded-br-[20px]`}
-      />
+      <View>
+        <MyImage uri={dataActivities.photoUrl} height={450} />
+      </View>
 
       <TouchableOpacity
         style={tw`absolute top-[35px] left-[13px]`}
