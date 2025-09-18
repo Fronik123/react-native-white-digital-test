@@ -3,6 +3,7 @@ import {
   createStackNavigator,
 } from '@react-navigation/stack'
 import HomeScreen from './HomeScreen'
+import FavoritesScreen from './FavoritesScreen'
 import { RootStackParamList } from './types/root'
 
 const Stack = createStackNavigator<RootStackParamList>()
@@ -12,6 +13,7 @@ const RootRouter = () => {
     <Stack.Navigator
       initialRouteName="Home"
       screenOptions={({ navigation }) => ({
+        cardStyle: { backgroundColor: '#FFFFFF' },
         headerShown: true,
         gestureEnabled: true,
         detachPreviousScreen: !navigation.isFocused(),
@@ -21,6 +23,12 @@ const RootRouter = () => {
       <Stack.Screen
         name="Home"
         component={HomeScreen}
+        options={{ headerShown: false }}
+      />
+
+      <Stack.Screen
+        name="Favorites"
+        component={FavoritesScreen}
         options={{ headerShown: false }}
       />
     </Stack.Navigator>

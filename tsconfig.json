@@ -12,6 +12,10 @@
       "@screens/*": ["screens/*"],
       "@screens": ["screens/index"],
       "@api/*": ["common/api/*"],
+      "@component/*": ["component/*"],
+      "@assets/*": ["assets/*"],
+      "@hooks/*": ["hooks/*"],
+      "@env": ["env.d.ts"]
     }
   }
 }
