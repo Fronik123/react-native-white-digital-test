@@ -5,10 +5,10 @@ import tw from '../../tw'
 import StartIcon from '@assets/icons/activities/star.svg'
 import MapPoint from '@assets/icons/activities/map-point.svg'
 
-import { Activities } from '../data/types/activities'
+import { TActivities } from '../data/types/activities'
 
 type Props = {
-  activitiesData: Activities
+  activitiesData: TActivities
 }
 
 const ActivitiesItem: React.FC<Props> = data => {

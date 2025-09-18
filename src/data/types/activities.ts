@@ -1,4 +1,4 @@
-export type Activities = {
+export type TActivities = {
   id: number
   name: string
   price: number
