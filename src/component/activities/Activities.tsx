@@ -27,7 +27,7 @@ const Activities: React.FC<Props> = ({
   navigation,
 }) => {
   return (
-    <View>
+    <View style={tw`flex-1`}>
       <Text
         style={tw`text-center text-fz16 leading-lh20 mb-[37.5px] mt-[18.5px]`}
       >
@@ -37,6 +37,7 @@ const Activities: React.FC<Props> = ({
       <FlatList
         keyExtractor={item => item.id.toString()}
         data={data}
+        contentContainerStyle={{ paddingBottom: 20 }}
         refreshControl={
           <RefreshControl refreshing={isRefetching} onRefresh={refetch} />
         }
