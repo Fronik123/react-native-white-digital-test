@@ -11,7 +11,11 @@ const api = axios.create({
 api.interceptors.response.use(
   response => response,
   error => {
-    console.error('API Error:', error.response?.data || error.message)
+    try {
+      console.error('API Error:', error.response?.data || error.message)
+    } catch (error_) {
+      console.error('Unexpected error in interceptor:', error_)
+    }
     return Promise.reject(error)
   },
 )
