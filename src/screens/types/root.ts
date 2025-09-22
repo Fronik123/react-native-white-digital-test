@@ -1,10 +1,10 @@
 import { StackScreenProps } from '@react-navigation/stack'
-import { Activities } from '../../data/types/activities'
+import { IActivities } from 'data/types/activities'
 
 export type RootStackParamList = {
   Home: undefined
   Favorites: {
-    activities: Activities
+    activities: IActivities
   }
 }
 

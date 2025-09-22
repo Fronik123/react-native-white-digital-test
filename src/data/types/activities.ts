@@ -1,4 +1,4 @@
-export type TActivities = {
+export interface IActivities {
   id: number
   name: string
   price: number
