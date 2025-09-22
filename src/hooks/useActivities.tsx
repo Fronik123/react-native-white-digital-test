@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query'
 import { fetchActivities } from '../api/activitiesApi'
-import { TActivities } from 'data/types/activities'
+import { IActivities } from 'data/types/activities'
 
 export const useActivities = () => {
-  return useQuery<TActivities[]>({
+  return useQuery<IActivities[]>({
     queryKey: ['activities'],
     queryFn: fetchActivities,
   })

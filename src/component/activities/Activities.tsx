@@ -4,15 +4,16 @@ import tw from '../../../tw'
 
 import { FlatList, RefreshControl } from 'react-native-gesture-handler'
 import ActivitiesItem from '@component/activities/ActivitiesItem'
-import { TActivities } from '../../data/types/activities'
+
 import { RootStackParamList } from '@screens/types/root'
 import { StackNavigationProp } from '@react-navigation/stack'
+import { IActivities } from 'data/types/activities'
 
-type Props = {
-  data: TActivities[]
+interface Props {
+  data: IActivities[]
   refetch: () => void
   handleActivitiesItem: (
-    item: TActivities,
+    item: IActivities,
     navigation: StackNavigationProp<RootStackParamList>,
   ) => void
   isRefetching: boolean

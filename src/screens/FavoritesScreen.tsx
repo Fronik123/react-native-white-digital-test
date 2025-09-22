@@ -9,7 +9,7 @@ import {
 } from 'react-native'
 import { StackNavigationProp } from '@react-navigation/stack'
 import { RouteProp } from '@react-navigation/native'
-import { RootStackParamList } from '../screens/types/root'
+import { RootStackParamList } from '@screens/types/root'
 
 import tw from '../../tw'
 
@@ -19,7 +19,7 @@ import { useAddFavorite } from '@hooks/useAddFavorite'
 import Loading from '@component/ui/Loading'
 import MyImage from '@component/ui/MyImage'
 
-type Props = {
+interface Props {
   route: RouteProp<RootStackParamList, 'Favorites'>
   navigation: StackNavigationProp<RootStackParamList, 'Favorites'>
 }

@@ -3,21 +3,20 @@ import { SafeAreaView, View, Text } from 'react-native'
 import { useActivities } from '@hooks/useActivities'
 import Error from '@component/Error'
 
-import { TActivities } from '../data/types/activities'
-
 import tw from '../../tw'
-
-import { RootStackParamList } from '../screens/types/root'
 import { StackNavigationProp } from '@react-navigation/stack'
 import Activities from '@component/activities/Activities'
 import Loading from '@component/ui/Loading'
+import { IActivities } from 'data/types/activities'
 
-type Props = {
+import { RootStackParamList } from '@screens/types/root'
+
+interface Props {
   navigation: StackNavigationProp<RootStackParamList>
 }
 
 const handleActivitiesItem = (
-  activities: TActivities,
+  activities: IActivities,
   navigation: StackNavigationProp<RootStackParamList>,
 ) => {
   navigation.navigate('Favorites', { activities })

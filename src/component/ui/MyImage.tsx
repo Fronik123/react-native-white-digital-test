@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { View } from 'react-native'
 import tw from '../../../tw'
-import Loading from './Loading'
-import FastImage from 'react-native-fast-image'
 
-type Props = {
+import FastImage from 'react-native-fast-image'
+import Loading from '@component/ui/Loading'
+
+interface Props {
   uri: string
   height?: number
 }
