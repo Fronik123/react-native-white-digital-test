@@ -10,20 +10,18 @@ import Loading from '@component/ui/Loading'
 import { IActivities } from 'data/types/activities'
 
 import { RootStackParamList } from '@screens/types/root'
+import { useNavigation } from '@react-navigation/native'
 
-interface Props {
-  navigation: StackNavigationProp<RootStackParamList>
-}
+interface Props {}
 
-const handleActivitiesItem = (
-  activities: IActivities,
-  navigation: StackNavigationProp<RootStackParamList>,
-) => {
-  navigation.navigate('Favorites', { activities })
-}
-
-const HomeScreen: React.FC<Props> = ({ navigation }) => {
+const HomeScreen: React.FC<Props> = () => {
   const { data, error, isLoading, isRefetching, refetch } = useActivities()
+
+  const { navigate } = useNavigation<StackNavigationProp<RootStackParamList>>()
+
+  const handleActivitiesItem = (activities: IActivities) => {
+    navigate('Favorites', { activities })
+  }
 
   if (error) {
     return <Error message={error.message} />
@@ -41,7 +39,6 @@ const HomeScreen: React.FC<Props> = ({ navigation }) => {
           refetch={refetch}
           handleActivitiesItem={handleActivitiesItem}
           isRefetching={isRefetching}
-          navigation={navigation}
         />
       ) : (
         <View style={tw`flex-1 justify-center items-center`}>
