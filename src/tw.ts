@@ -1,6 +1,6 @@
 import { create } from 'twrnc'
 import { Config } from 'tailwindcss'
-import tailwindConfig from './tailwind.config'
+import tailwindConfig from '../tailwind.config'
 
 export type TwConfig = Config
 

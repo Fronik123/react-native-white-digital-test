@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query'
-import api from '../api/axiosConfig'
+import api from '@api/axiosConfig'
 
 export const useAddFavorite = (
   setMessage: React.Dispatch<React.SetStateAction<string>>,

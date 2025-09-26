@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import tw from '../../tw'
+import tw from '@tw'
 
 interface Props {
   message: string

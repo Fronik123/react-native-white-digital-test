@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { View } from 'react-native'
-import tw from '../../../tw'
-
+import tw from '@tw'
 import FastImage from 'react-native-fast-image'
 import Loading from '@component/ui/Loading'
 

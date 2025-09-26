@@ -1,10 +1,8 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import tw from '../../../tw'
-
+import tw from '@tw'
 import StartIcon from '@assets/icons/activities/star.svg'
 import MapPoint from '@assets/icons/activities/map-point.svg'
-
 import { IActivities } from 'data/types/activities'
 import MyImage from '@component/ui/MyImage'
 
