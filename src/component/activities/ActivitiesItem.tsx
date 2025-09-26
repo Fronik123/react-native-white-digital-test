@@ -4,7 +4,7 @@ import tw from '@tw'
 import StartIcon from '@assets/icons/activities/star.svg'
 import MapPoint from '@assets/icons/activities/map-point.svg'
 import { IActivities } from 'data/types/activities'
-import MyImage from '@component/ui/CustomImage'
+import CustomImage from '@component/ui/CustomImage'
 
 interface Props {
   activitiesData: IActivities
@@ -16,7 +16,7 @@ const ActivitiesItem: React.FC<Props> = data => {
   return (
     <View style={tw`mr-5 ml-5 mb-2.5`}>
       <View>
-        <MyImage uri={activities.photoUrl} />
+        <CustomImage uri={activities.photoUrl} />
       </View>
 
       <View style={tw`border-0 rounded-[20px] p-5 bg-bgGray`}>
