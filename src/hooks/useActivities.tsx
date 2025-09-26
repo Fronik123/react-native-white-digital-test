@@ -1,6 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
 import api from '@api/axiosConfig'
-
 import { IActivities } from 'data/types/activities'
 
 export const useActivities = () => {
