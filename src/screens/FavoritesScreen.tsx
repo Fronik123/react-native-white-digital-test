@@ -7,7 +7,6 @@ import { useAddFavorite } from '@hooks/useAddFavorite'
 import Loading from '@component/ui/Loading'
 import CustomImage from '@component/ui/CustomImage'
 import CustomButton from '@component/ui/CustomButton'
-import BackButton from '@component/ui/BackButton'
 
 interface Props {
   route: RouteProp<RootStackParamList, 'Favorites'>
@@ -43,8 +42,6 @@ const FavoritesScreen: React.FC<Props> = ({ route }) => {
       <View>
         <CustomImage uri={dataActivities.photoUrl} height={450} />
       </View>
-
-      <BackButton />
 
       <View style={tw`mt-5 ml-5 mr-5 mb-5`}>
         <Text style={tw`text-mainBlack text-fz24 leading-lh30`}>

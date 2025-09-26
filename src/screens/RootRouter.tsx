@@ -5,8 +5,10 @@ import {
 import HomeScreen from '@screens/HomeScreen'
 import FavoritesScreen from '@screens/FavoritesScreen'
 import { RootStackParamList } from '@screens/types/root'
+import BackButton from '@component/ui/BackButton'
 
 const Stack = createStackNavigator<RootStackParamList>()
+const FavoritesHeaderLeft = () => <BackButton />
 
 const RootRouter = () => {
   return (
@@ -29,7 +31,11 @@ const RootRouter = () => {
       <Stack.Screen
         name="Favorites"
         component={FavoritesScreen}
-        options={{ headerShown: false }}
+        options={{
+          headerLeft: FavoritesHeaderLeft,
+          title: '',
+          headerTransparent: true,
+        }}
       />
     </Stack.Navigator>
   )
