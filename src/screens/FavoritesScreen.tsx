@@ -5,7 +5,7 @@ import { RootStackParamList } from '@screens/types/root'
 import tw from '@tw'
 import { useAddFavorite } from '@hooks/useAddFavorite'
 import Loading from '@component/ui/Loading'
-import MyImage from '@component/ui/CustomImage'
+import CustomImage from '@component/ui/CustomImage'
 import CustomButton from '@component/ui/CustomButton'
 import BackButton from '@component/ui/BackButton'
 
@@ -41,7 +41,7 @@ const FavoritesScreen: React.FC<Props> = ({ route }) => {
       {isPending && <Loading />}
 
       <View>
-        <MyImage uri={dataActivities.photoUrl} height={450} />
+        <CustomImage uri={dataActivities.photoUrl} height={450} />
       </View>
 
       <BackButton />
