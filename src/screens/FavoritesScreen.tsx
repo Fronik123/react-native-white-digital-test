@@ -1,27 +1,19 @@
 import React, { useState, useEffect } from 'react'
-import {
-  View,
-  Text,
-  StatusBar,
-  TouchableOpacity,
-  Alert,
-  ScrollView,
-} from 'react-native'
-import { StackNavigationProp } from '@react-navigation/stack'
+import { View, Text, StatusBar, Alert, ScrollView } from 'react-native'
 import { RouteProp } from '@react-navigation/native'
 import { RootStackParamList } from '@screens/types/root'
 import tw from '@tw'
-import BackIcon from '@assets/icons/favorites/back.svg'
 import { useAddFavorite } from '@hooks/useAddFavorite'
 import Loading from '@component/ui/Loading'
 import MyImage from '@component/ui/CustomImage'
+import CustomButton from '@component/ui/CustomButton'
+import BackButton from '@component/ui/BackButton'
 
 interface Props {
   route: RouteProp<RootStackParamList, 'Favorites'>
-  navigation: StackNavigationProp<RootStackParamList, 'Favorites'>
 }
 
-const FavoritesScreen: React.FC<Props> = ({ navigation, route }) => {
+const FavoritesScreen: React.FC<Props> = ({ route }) => {
   const dataActivities = route.params.activities
 
   const [message, setMessage] = useState<string>('')
@@ -52,12 +44,7 @@ const FavoritesScreen: React.FC<Props> = ({ navigation, route }) => {
         <MyImage uri={dataActivities.photoUrl} height={450} />
       </View>
 
-      <TouchableOpacity
-        style={tw`absolute top-[35px] left-[13px]`}
-        onPress={() => navigation.goBack()}
-      >
-        <BackIcon />
-      </TouchableOpacity>
+      <BackButton />
 
       <View style={tw`mt-5 ml-5 mr-5 mb-5`}>
         <Text style={tw`text-mainBlack text-fz24 leading-lh30`}>
@@ -86,14 +73,10 @@ const FavoritesScreen: React.FC<Props> = ({ navigation, route }) => {
           </Text>
         </View>
 
-        <TouchableOpacity
+        <CustomButton
+          title="Add to Favorites"
           onPress={() => addFavorite(dataActivities.id)}
-          style={tw`bg-mainBlack h-14 items-center justify-center rounded-[800px] mt-[73px]`}
-        >
-          <Text style={tw`text-secondaryWhite text-fz16 leading-lh20`}>
-            Add to Favorites
-          </Text>
-        </TouchableOpacity>
+        />
       </View>
     </ScrollView>
   )
