@@ -14,7 +14,7 @@ import tw from '@tw'
 import BackIcon from '@assets/icons/favorites/back.svg'
 import { useAddFavorite } from '@hooks/useAddFavorite'
 import Loading from '@component/ui/Loading'
-import MyImage from '@component/ui/MyImage'
+import MyImage from '@component/ui/CustomImage'
 
 interface Props {
   route: RouteProp<RootStackParamList, 'Favorites'>

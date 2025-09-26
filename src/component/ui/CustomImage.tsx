@@ -9,18 +9,20 @@ interface Props {
   height?: number
 }
 
-const MyImage: React.FC<Props> = ({ uri, height = 139 }) => {
+const CustomImage: React.FC<Props> = ({ uri, height = 139 }) => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
+
+  const FALLBACK_IMAGE =
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-UWixC5WPWw_mgNb05inJ_lK2cbffBJ2Wfd79o0RApHhacgcsiCCf4BFrqvvl4XXIf48&usqp=CAU'
 
   return (
     <View>
       {loading && <Loading />}
+
       <FastImage
         source={{
-          uri: error
-            ? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-UWixC5WPWw_mgNb05inJ_lK2cbffBJ2Wfd79o0RApHhacgcsiCCf4BFrqvvl4XXIf48&usqp=CAU'
-            : uri,
+          uri: error ? FALLBACK_IMAGE : uri,
           priority: FastImage.priority.normal,
           cache: FastImage.cacheControl.immutable,
         }}
@@ -39,4 +41,4 @@ const MyImage: React.FC<Props> = ({ uri, height = 139 }) => {
   )
 }
 
-export default MyImage
+export default CustomImage

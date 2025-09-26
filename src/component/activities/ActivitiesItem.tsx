@@ -4,7 +4,7 @@ import tw from '@tw'
 import StartIcon from '@assets/icons/activities/star.svg'
 import MapPoint from '@assets/icons/activities/map-point.svg'
 import { IActivities } from 'data/types/activities'
-import MyImage from '@component/ui/MyImage'
+import MyImage from '@component/ui/CustomImage'
 
 interface Props {
   activitiesData: IActivities
