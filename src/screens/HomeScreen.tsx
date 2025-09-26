@@ -2,15 +2,13 @@ import React from 'react'
 import { SafeAreaView, View, Text } from 'react-native'
 import { useActivities } from '@hooks/useActivities'
 import Error from '@component/Error'
-
-import tw from '../../tw'
 import { StackNavigationProp } from '@react-navigation/stack'
 import Activities from '@component/activities/Activities'
 import Loading from '@component/ui/Loading'
 import { IActivities } from 'data/types/activities'
-
 import { RootStackParamList } from '@screens/types/root'
 import { useNavigation } from '@react-navigation/native'
+import tw from '@tw'
 
 interface Props {}
 

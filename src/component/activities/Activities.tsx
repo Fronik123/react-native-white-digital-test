@@ -1,10 +1,8 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
-import tw from '../../../tw'
-
+import tw from '@tw'
 import { FlatList, RefreshControl } from 'react-native-gesture-handler'
 import ActivitiesItem from '@component/activities/ActivitiesItem'
-
 import { IActivities } from 'data/types/activities'
 
 interface Props {

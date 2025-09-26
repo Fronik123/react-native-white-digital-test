@@ -2,9 +2,9 @@ import {
   TransitionPresets,
   createStackNavigator,
 } from '@react-navigation/stack'
-import HomeScreen from './HomeScreen'
-import FavoritesScreen from './FavoritesScreen'
-import { RootStackParamList } from './types/root'
+import HomeScreen from '@screens/HomeScreen'
+import FavoritesScreen from '@screens/FavoritesScreen'
+import { RootStackParamList } from '@screens/types/root'
 
 const Stack = createStackNavigator<RootStackParamList>()
 

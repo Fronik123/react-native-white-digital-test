@@ -9,9 +9,10 @@
     "noUnusedParameters": true,
     "baseUrl": "src",
     "paths": {
+      "@tw": ["tw.ts"],
       "@screens/*": ["screens/*"],
       "@screens": ["screens/index"],
-      "@api/*": ["common/api/*"],
+      "@api/*": ["api/*"],
       "@component/*": ["component/*"],
       "@assets/*": ["assets/*"],
       "@hooks/*": ["hooks/*"],

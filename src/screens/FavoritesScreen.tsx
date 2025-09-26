@@ -10,11 +10,8 @@ import {
 import { StackNavigationProp } from '@react-navigation/stack'
 import { RouteProp } from '@react-navigation/native'
 import { RootStackParamList } from '@screens/types/root'
-
-import tw from '../../tw'
-
+import tw from '@tw'
 import BackIcon from '@assets/icons/favorites/back.svg'
-
 import { useAddFavorite } from '@hooks/useAddFavorite'
 import Loading from '@component/ui/Loading'
 import MyImage from '@component/ui/MyImage'
