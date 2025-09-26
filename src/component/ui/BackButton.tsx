@@ -13,7 +13,7 @@ const BackButton: React.FC<Props> = ({ style }) => {
 
   return (
     <TouchableOpacity
-      style={[tw`absolute top-[35px] left-[13px]`, style]}
+      style={[tw`left-[13px]`, style]}
       onPress={() => navigation.goBack()}
     >
       <BackIcon />
